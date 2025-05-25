@@ -4,7 +4,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    
+ 
     <nav className="w-full border-2 border-amber-50 hover:border-cyan-500 bg-[#0b0f18] text-white py-6 px-8 shadow-lg flex justify-between items-center rounded-b-3xl relative">
       {/* Logo + Brand Name */}
       <div className="flex items-center space-x-3">
@@ -13,8 +13,10 @@ const Navbar = () => {
           alt="E-Cell"
           className="w-12 h-12 sm:w-14 sm:h-14"
         />
-        <div className="text-2xl sm:text-3xl font-extrabold">E-Cell</div>
-        <div className="text-sm text-gray-400 hidden sm:block">NITK Surathkal</div>
+        <div className="text-2xl sm:text-3xl font-extrabold">E-Cell
+          <div className="text-sm text-blue-400 hidden sm:block">NITK Surathkal</div>
+        </div>
+        
       </div>
 
       {/* Desktop Nav Links */}
