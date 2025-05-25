@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Nav Links */}
-      <div className="hidden sm:flex space-x-5 sm:space-x-8 text-base sm:text-lg font-semibold">
+      <div className="hidden sm:flex space-x-2 sm:space-x-1 text-base sm:text-lg font-semibold">
         {["Home", "Events", "Team", "Gallery", "Contact"].map((item) => (
           <button
             key={item}
