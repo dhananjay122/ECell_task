@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EventCard from "../components/EventCard";
 import Navbar from "../components/Navbar";
-
+import Footer from "../components/Footer";
 const categories = ["All", "Tech", "Finance", "Marketing", "Competitions"];
 
 const events = [
@@ -112,6 +112,7 @@ const EventsPage = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
