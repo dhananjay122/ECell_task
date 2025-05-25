@@ -10,7 +10,7 @@ const events = [
     description: "Ideathon is to gather participants to collaboratively identify real-world problems and brainstorm innovative...",
     date: "31 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/Ideathon.jpg",
     category: "Tech",
   },
   {
@@ -18,7 +18,7 @@ const events = [
     description: "To provide participants with a platform to analyze and solve real-world case studies related to business...",
     date: "29 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/Finance.jpg",
     category: "Finance",
   },
   {
@@ -26,7 +26,7 @@ const events = [
     description: "To encourage creative problem-solving and entrepreneurship by challenging participants to come up with viable...",
     date: "28 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/E-Pitch.jpeg",
     category: "Marketing",
   },
   {
@@ -34,7 +34,7 @@ const events = [
     description: "To encourage creative problem-solving and entrepreneurship by challenging participants to come up with viable...",
     date: "28 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/HTF.jpg",
     category: "Competitions",
   },
   {
@@ -42,7 +42,7 @@ const events = [
     description: "Ideathon is to gather participants to collaboratively identify real-world problems and brainstorm innovative...",
     date: "31 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/Ideathon.jpg",
     category: "Tech",
   },
   {
@@ -50,7 +50,7 @@ const events = [
     description: "To provide participants with a platform to analyze and solve real-world case studies related to business...",
     date: "29 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/Finance.jpg",
     category: "Finance",
   },
   {
@@ -58,7 +58,7 @@ const events = [
     description: "To encourage creative problem-solving and entrepreneurship by challenging participants to come up with viable...",
     date: "28 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/E-Pitch.jpeg",
     category: "Marketing",
   },
   {
@@ -66,7 +66,7 @@ const events = [
     description: "To encourage creative problem-solving and entrepreneurship by challenging participants to come up with viable...",
     date: "28 Jan 2025",
     location: "NITK",
-    image: "/images/e-summit.png",
+    image: "/images/CTF.jpg",
     category: "Competitions",
   },
 ];
