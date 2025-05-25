@@ -4,6 +4,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
+    
     <nav className="w-full border-2 border-amber-50 hover:border-cyan-500 bg-[#0b0f18] text-white py-6 px-8 shadow-lg flex justify-between items-center rounded-b-3xl relative">
       {/* Logo + Brand Name */}
       <div className="flex items-center space-x-3">
@@ -83,6 +84,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    
   );
 };
 
