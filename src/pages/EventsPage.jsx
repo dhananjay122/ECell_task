@@ -77,7 +77,7 @@ const events = [
     image: "/images/Ideathon.jpg",
     category: "Tech",
   },
-  {
+   {
     title: "ACE The CASE",
     description: "To provide participants with a platform to analyze and solve real-world case studies related to business...",
     date: "29 Jan 2025",
@@ -178,6 +178,7 @@ const EventsPage = () => {
       </div>
       <Footer/>
     </div>
+    
   );
 };
 
