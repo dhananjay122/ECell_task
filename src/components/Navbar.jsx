@@ -83,7 +83,7 @@ const Navbar = () => {
           <button
             key={item}
             role="menuitem"
-            className="text-white text-lg font-semibold hover:text-orange-400 transition"
+            className="text-white text-2xl font-semibold hover:text-orange-400 transition"
             onClick={() => setOpen(false)}
           >
             {item}
