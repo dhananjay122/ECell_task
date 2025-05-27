@@ -25,11 +25,11 @@ const Navbar = () => {
 
 
       {/* Desktop Nav Links */}
-      <div className="hidden sm:flex space-x-2 sm:space-x-1 text-base sm:text-lg font-semibold">
+      <div className="hidden sm:flex space-x-3 sm:space-x-4 text-base sm:text-lg font-semibold">
         {["Home", "Events", "Team", "Gallery", "Contact"].map((item) => (
           <button
             key={item}
-            className="hover:text-orange-400 transition duration-200 hover:scale-110"
+            className="hover:text-gray-400 transition duration-200 hover:scale-110"
           >
             {item}
           </button>
