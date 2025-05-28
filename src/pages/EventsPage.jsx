@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
 import EventCard from "../components/EventCard";
 
 const categories = ["All", "Tech", "Finance", "Marketing", "Competitions"];
@@ -102,55 +103,122 @@ const events = [
   },
 ];
 
-
 const EventsPage = () => {
   const [filter, setFilter] = useState("All");
+  const filterRef = useRef(null);
+  const cardsRef = useRef([]);
+  
+    useEffect(() => {
+  gsap.fromTo(
+    headingRef.current,
+    { y: -30, opacity: 0, scale: 0.95 },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 1,
+      ease: "power3.out",
+    }
+  );
+}, []);
+  useEffect(() => {
+    gsap.fromTo(
+      filterRef.current,
+      { opacity: 0, y: -20 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+    );
+  }, []);
 
-  const filteredEvents = filter === "All" ? events : events.filter(event => event.category === filter);
+  useEffect(() => {
+    if (cardsRef.current.length > 0) {
+      gsap.fromTo(
+        cardsRef.current,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+        }
+      );
+    }
+  }, [filter]);
+  
+
+
+  const filteredEvents =
+    filter === "All"
+      ? events
+      : events.filter((event) => event.category === filter);
+  const headingRef = useRef(null);
 
   return (
     <div className="bg-black min-h-screen h-full w-full py-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
-      
-      <h1 className="text-white text-4xl sm:text-5xl font-bold text-center mb-8">Events</h1>
+     <h1
+       ref={headingRef}
+       className="text-white text-4xl sm:text-5xl font-bold text-center mb-8 drop-shadow-[0_0_10px_rgba(128,0,255,0.6)]"
+       style={{
+         textShadow:
+           "0 0 8px rgba(128,0,255,0.7), 0 0 15px rgba(75,0,130,0.6), 0 0 20px rgba(128,0,255,0.5)",
+        }}
+      >
+      Events
+      </h1>
 
-     {/* Filter bar */}
-<div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-12">
-  {categories.map((cat) => (
-    <button
-      key={cat}
-      onClick={() => setFilter(cat)}
-      className={`px-5 py-2 rounded-md font-semibold text-sm sm:text-base
-        ${
-          filter === cat
-            ? "bg-amber-600 text-white"
-            : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
-        }`}
-    >
-      {cat}
-    </button>
-  ))}
+
+
+      {/* Filter bar */}
+      <div
+        className="flex flex-wrap justify-center gap-x-7 gap-y-5 mb-12"
+        ref={filterRef}
+      >
+        {categories.map((cat) => (
+         <button
+           key={cat}
+           onClick={() => setFilter(cat)}
+           className={`px-5 py-2 rounded-md font-semibold text-sm sm:text-base
+             ${
+               filter === cat
+                 ? "bg-indigo-700 text-white"
+                 : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
+             }`}
+           style={{
+             boxShadow: "0 0 8px 2px rgba(0, 0, 128, 0.6), 0 0 12px 4px rgba(0, 255, 255, 0.5)"
+           }}
+          >
+            {cat}
+          </button>
+
+
+
+        ))}
+      </div>
+
+      
+  {/* Grid or Fallback Message */}
+<div className="w-full">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 min-h-[40vh]">
+    {filteredEvents.length > 0 ? (
+      filteredEvents.map((event, index) => (
+        <div key={index} ref={(el) => (cardsRef.current[index] = el)}>
+          <EventCard {...event} />
+        </div>
+      ))
+    ) : (
+      <div className="col-span-full w-full flex justify-center items-center text-white text-xl">
+        No events found for "{filter}"
+      </div>
+    )}
+  </div>
 </div>
 
-
-      {/* Grid or Fallback Message */}
-      <div className="w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 min-h-[40vh]">
-          {filteredEvents.length > 0 ? (
-            filteredEvents.map((event, index) => <EventCard key={index} {...event} />)
-          ) : (
-            <div className="col-span-full w-full flex justify-center items-center text-white text-xl">
-              No events found for "{filter}"
-            </div>
-          )}
-        </div>
-      </div>
-      
     </div>
-    
   );
 };
 
 export default EventsPage;
+
 
 
 

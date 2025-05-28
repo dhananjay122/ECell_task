@@ -5,7 +5,14 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const EventCard = ({ title, description, date, location, image }) => {
   return (
-    <div className="bg-gray-900 text-white rounded-3xl overflow-hidden shadow-xl border-2 border-black hover:border-amber-500 transition-all hover:-translate-y-1 hover:scale-105 duration-300 flex flex-col justify-between h-full">
+    <div
+    className="bg-gray-900 text-white rounded-3xl overflow-hidden border-2 border-black hover:border-cyan-500 transition-all hover:-translate-y-1 hover:scale-105 duration-300 flex flex-col justify-between h-full shadow-[0_0_10px_rgba(0,0,128,0.5)]"
+    style={{
+    boxShadow:
+      "0 0 10px rgba(0, 0, 128, 0.5), 0 0 20px rgba(0, 255, 255, 0.4), 0 0 30px rgba(0, 255, 255, 0.2)",
+  }}
+  >
+
       
       {/* Image Banner */}
       <div className="w-full h-48 sm:h-56 md:h-64 lg:h-48 xl:h-56">
