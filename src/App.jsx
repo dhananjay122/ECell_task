@@ -5,13 +5,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white p-4">
-       <Navbar />
-      <EventsPage/>
-      <Footer/>
+    <div className="bg-black min-h-screen h-full w-full py-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+      <Navbar />
+      <EventsPage /> 
+      <Footer />
     </div>
   );
 }
+
 
 
 export default App;

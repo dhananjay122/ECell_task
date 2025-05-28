@@ -35,7 +35,7 @@ const EventCard = ({ title, description, date, location, image }) => {
 
         {/* Register Button */}
         <div className="mt-6">
-          <button className="w-full sm:w-auto bg-[#FF5722] text-white hover:bg-[#E64A19] px-6 py-2 rounded-full flex items-center justify-center gap-2 text-sm font-semibold transition mx-auto">
+          <button className="w-full sm:w-auto bg-[#f94d19] text-white hover:bg-[#E64A19] px-6 py-2 rounded-full flex items-center justify-center gap-2 text-sm font-semibold transition mx-auto">
             Register <FiArrowUpRight />
           </button>
         </div>
