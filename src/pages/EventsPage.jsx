@@ -30,6 +30,14 @@ const events = [
     category: "Tech",
   },
   {
+    title: "TechTalks",
+    description: "Industry professionals share insights on emerging technologies, career guidance, and innovation trends.",
+    date: "29 Jan 2025",
+    location: "NITK",
+    image: "/images/TechTalks.jpeg",
+    category: "Tech",
+  },
+  {
     title: "ACE The CASE",
     description: "Analyze and solve real-world case studies to test your strategic thinking and business acumen.",
     date: "29 Jan 2025",
@@ -43,6 +51,14 @@ const events = [
     date: "30 Jan 2025",
     location: "NITK",
     image: "/images/FinQuest.png",
+    category: "Finance",
+  },
+  {
+    title: "Market Mania",
+    description: "Simulate stock market trading and compete to build the highest portfolio in this exciting finance game.",
+    date: "31 Jan 2025",
+    location: "NITK",
+    image: "/images/MarketMania.jpeg",
     category: "Finance",
   },
   {
@@ -77,6 +93,14 @@ const events = [
     image: "/images/AdMad.jpeg",
     category: "Marketing",
   },
+    {
+    title: "Ad-Mad Show",
+    description: "Unleash your creativity in a quirky ad-making competition with limited resources and unlimited ideas.",
+    date: "31 Jan 2025",
+    location: "NITK",
+    image: "/images/AdMad.jpeg",
+    category: "Marketing",
+  },
   {
     title: "Hack-to-Future",
     description: "A 24-hour hackathon to develop prototypes that solve futuristic societal or environmental challenges.",
@@ -91,6 +115,14 @@ const events = [
     date: "28 Jan 2025",
     location: "NITK",
     image: "/images/CTF.jpg",
+    category: "Competitions",
+  },
+  {
+    title: "RoboRace",
+    description: "Build and race your autonomous or manually controlled robots through a challenging obstacle course.",
+    date: "31 Jan 2025",
+    location: "NITK",
+    image: "/images/RoboRace.webp",
     category: "Competitions",
   },
   {
