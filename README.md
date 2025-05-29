@@ -6,7 +6,8 @@
 5] Finally deployed using netlify by pipelining to Github.
 # For checking the development
 1] Create a folder in the system<br>
-2] git clone <repo link> <br>
+2] git clone repo link <br>
+3] cd ecell-events
 3] npm install <br>
 4] npm run dev <br>
 # Web page link is here below
